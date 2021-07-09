@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="./common.props"/>
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>$(OdinGeneratePackageOnBuild)</GeneratePackageOnBuild>
+    <AssemblyName>$(OdinAssemblyName)</AssemblyName>
+    <RootNamespace>$(OdinCoreDemo)</RootNamespace>
+    <OutputType>$(OdinOutputType)</OutputType>
+    <PackageId>$(OdinPackageId)</PackageId>
+    <Authors>$(OdinAuthors)</Authors>
+    <Company>$(OdinCompany)</Company>
+    <Copyright>$(OdinCopyright)</Copyright>
+    <Product>$(OdinProduct)</Product>
+    <Description>$(OdinDescription)</Description>
+    <Version>$(OdinVersion)</Version>
+    <RepositoryType>$(OdinRepositoryType)</RepositoryType>
+    <PackageTags>$(OdinPackageTags)</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="OdinPlugs.OdinInject" Version="1.0.1"/>
+  </ItemGroup>
+</Project>
