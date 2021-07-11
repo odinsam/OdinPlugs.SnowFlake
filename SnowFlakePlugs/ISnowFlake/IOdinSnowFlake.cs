@@ -1,7 +1,7 @@
 
 using OdinPlugs.OdinInject.InjectInterface;
 
-namespace OdinPlugs.SnowFlake.SnowFlakeInterface
+namespace OdinPlugs.SnowFlake.SnowFlakePlugs.ISnowFlake
 {
     public interface IOdinSnowFlake : IAutoInjectWithParams
     {

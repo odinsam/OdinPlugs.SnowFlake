@@ -2,9 +2,10 @@ using System.Threading;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using OdinPlugs.SnowFlake.SnowFlakeInterface;
+using OdinPlugs.SnowFlake.Models;
+using OdinPlugs.SnowFlake.SnowFlakePlugs.ISnowFlake;
 
-namespace OdinPlugs.SnowFlake
+namespace OdinPlugs.SnowFlake.SnowFlakePlugs
 {
     public class OdinSnowFlake : IOdinSnowFlake
     {
@@ -38,6 +39,30 @@ namespace OdinPlugs.SnowFlake
         public long lastTimestamp { get; private set; }
         private static Dictionary<long, long> dicContainer = null;
 
+        /// <summary>
+        /// 雪花ID
+        /// </summary>
+        /// <param name="datacenterId">数据中心ID</param>
+        /// <param name="workerId">工作机器ID</param>
+        /// <param name="twepoch">开始时间截((new DateTime(yyyy, MM, dd, 0, 0, 0, DateTimeKind.Utc)-Jan1st1970).TotalMilliseconds)</param>
+        public OdinSnowFlake(SnowFlake_Model model)
+        {
+            this.twepoch = (long)((new DateTime(2020, 1, 1, 0, 0, 0, DateTimeKind.Utc) - Jan1st1970).TotalMilliseconds);
+            if (model.DatacenterId > maxDatacenterId || model.DatacenterId < 0)
+            {
+                throw new Exception(string.Format("datacenter Id can't be greater than {0} or less than 0", maxDatacenterId));
+            }
+            if (model.WorkerId > maxWorkerId || model.WorkerId < 0)
+            {
+                throw new Exception(string.Format("worker Id can't be greater than {0} or less than 0", maxWorkerId));
+            }
+            this.workerId = model.WorkerId;
+            this.datacenterId = model.DatacenterId;
+            this.sequence = 0L;
+            this.lastTimestamp = -1L;
+            if (dicContainer == null)
+                dicContainer = new Dictionary<long, long>();
+        }
 
         /// <summary>
         /// 雪花ID
