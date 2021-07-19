@@ -15,11 +15,12 @@
     <Version>1.0.5</Version>
     <RepositoryType>$(OdinRepositoryType)</RepositoryType>
     <PackageTags>$(OdinPackageTags)</PackageTags>
-	<PackageProjectUrl>$(OdinGitUrl)/OdinPlugs.Utils.git</PackageProjectUrl>
-	<RepositoryUrl>$(OdinGitUrl)/$(OdinAssemblyName)</RepositoryUrl>
-	<RepositoryType>$(OdinRepositoryType)</RepositoryType>
-	<RepositoryBranch>master</RepositoryBranch>
-	<PackageIcon>icon.png</PackageIcon>
+    <PackageProjectUrl>$(OdinGitUrl)/OdinPlugs.Utils.git</PackageProjectUrl>
+    <RepositoryUrl>$(OdinGitUrl)/$(OdinAssemblyName)</RepositoryUrl>
+    <RepositoryType>$(OdinRepositoryType)</RepositoryType>
+    <RepositoryBranch>master</RepositoryBranch>
+    <PackageIcon>icon.png</PackageIcon>
+    <IsPackable>true</IsPackable>
   </PropertyGroup>
 	<ItemGroup>
 		<None Include="images\icon.png" Pack="true" PackagePath="" />
