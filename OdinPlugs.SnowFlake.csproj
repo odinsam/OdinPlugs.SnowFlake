@@ -1,23 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <Import Project="./common.props" />
   <PropertyGroup>
+    <Version>1.0.5</Version>
     <TargetFramework>net5.0</TargetFramework>
-    <GeneratePackageOnBuild>$(OdinGeneratePackageOnBuild)</GeneratePackageOnBuild>
-    <AssemblyName>$(OdinAssemblyName)</AssemblyName>
-    <RootNamespace>$(OdinCoreDemo)</RootNamespace>
-    <OutputType>$(OdinOutputType)</OutputType>
+    <AssemblyName>OdinPlugs.SnowFlake</AssemblyName>
+    <RootNamespace>OdinPlugs.SnowFlake</RootNamespace>
+    
     <PackageId>$(OdinPackageId)</PackageId>
     <Authors>$(OdinAuthors)</Authors>
     <Company>$(OdinCompany)</Company>
     <Copyright>$(OdinCopyright)</Copyright>
     <Product>$(OdinProduct)</Product>
     <Description>$(OdinDescription)</Description>
-    <Version>1.0.5</Version>
+    <RepositoryType>$(OdinRepositoryType)</RepositoryType>
     <RepositoryType>$(OdinRepositoryType)</RepositoryType>
     <PackageTags>$(OdinPackageTags)</PackageTags>
-    <PackageProjectUrl>$(OdinGitUrl)/OdinPlugs.Utils.git</PackageProjectUrl>
+    <Title>$(OdinAssemblyName)</Title>
+    <PackageProjectUrl>$(OdinGitUrl)/OdinPlugs.SnowFlake</PackageProjectUrl>
     <RepositoryUrl>$(OdinGitUrl)/$(OdinAssemblyName)</RepositoryUrl>
-    <RepositoryType>$(OdinRepositoryType)</RepositoryType>
     <RepositoryBranch>master</RepositoryBranch>
     <PackageIcon>icon.png</PackageIcon>
     <IsPackable>true</IsPackable>
