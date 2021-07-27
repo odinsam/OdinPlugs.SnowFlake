@@ -1,10 +1,10 @@
 # OdinPlugs.SnowFlake
-[![](https://img.shields.io/nuget/v/OdinPlugs.SnowFlake)](https://www.nuget.org/packages/OdinPlugs.SnowFlake) ![](https://img.shields.io/badge/version-1.0.5-brightgreen.svg) ![](https://img.shields.io/github/issues/odinsam/OdinPlugs.SnowFlake) ![](https://img.shields.io/github/forks/odinsam/OdinPlugs.SnowFlake) ![](https://img.shields.io/github/stars/odinsam/OdinPlugs.SnowFlake) ![](https://img.shields.io/badge/platform-.Net_Core_5.0-brightgreen.svg) ![](https://img.shields.io/github/license/odinsam/OdinPlugs.SnowFlake) [![](https://img.shields.io/badge/Blog-odinsam.com-blue.svg)](https://odinsam.com) 
 
+[![Nuget](https://img.shields.io/nuget/v/OdinPlugs.SnowFlake)](https://www.nuget.org/packages/OdinPlugs.SnowFlake/) ![Nuget](https://img.shields.io/nuget/dt/OdinPlugs.SnowFlake) ![](https://img.shields.io/badge/version-1.0.5-brightgreen.svg) ![](https://img.shields.io/github/issues/odinsam/OdinPlugs.SnowFlake) ![](https://img.shields.io/github/forks/odinsam/OdinPlugs.SnowFlake) ![](https://img.shields.io/github/stars/odinsam/OdinPlugs.SnowFlake) ![](https://img.shields.io/badge/platform-.Net_Core_5.0-brightgreen.svg) ![](https://img.shields.io/github/license/odinsam/OdinPlugs.SnowFlake) [![](https://img.shields.io/badge/Blog-odinsam.com-blue.svg)](https://odinsam.com)
 
 **简介:**
 
-> 用于生成和解析雪花ID
+> 用于生成和解析雪花 ID
 
 1. 注入:
 
@@ -17,6 +17,7 @@ services.AddScopedSnowFlake(1,1);
 ```
 
 使用方法:
+
 ```csharp
 //  创建雪花Id
 OdinInjectCore.GetService<IOdinSnowFlake>().CreateSnowFlakeId();
